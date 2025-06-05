@@ -147,7 +147,7 @@ Example results (may vary based on dataset split and hyperparameters):
 | Decision Tree         | 0.82          | 0.90                 | 0.71              | 0.83                |
 | Random Forest         | 0.85          | 0.91                 | 0.78              | 0.84                |
 | XGBoost               | 0.53          | 0.53                 | 0.52              | 0.52                |
-| Neural Network (Keras)| 0.83          | 0.79                 | 0.83              | 0.81                |
+| Neural Network (Keras)| 0.50          | 0.50                 | 1.00              | 0.67                |
 
 Feature importance (from Random Forest / XGBoost) typically identifies:  
 1. `stage`  
