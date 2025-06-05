@@ -4,22 +4,6 @@ A machine learning project that builds and compares several models to predict lu
 
 ---
 
-## Table of Contents
-
-- [Project Overview](#project-overview)  
-- [Dataset](#dataset)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [Modeling](#modeling)  
-- [Evaluation](#evaluation)  
-- [File Structure](#file-structure)  
-- [Conclusion & Future Work](#conclusion--future-work)  
-- [Contributing](#contributing)  
-- [License](#license)  
-- [Acknowledgments](#acknowledgments)  
-
----
-
 ## Project Overview
 
 Lung cancer remains one of the leading causes of cancer-related deaths worldwide. Accurate survival predictions can guide clinical decisions and personalize treatment plans. This project:
@@ -43,7 +27,6 @@ Lung cancer remains one of the leading causes of cancer-related deaths worldwide
   - `smoking_history` (e.g., pack‑years)  
   - `survived` (binary target: 0 = did not survive, 1 = survived)  
 
-> **Note:** If you have an updated or extended dataset with additional features (biomarkers, imaging, comorbidities), you can replace the CSV under `data/` and adjust the preprocessing notebook accordingly.
 
 ---
 
@@ -160,10 +143,10 @@ Example results (may vary based on dataset split and hyperparameters):
 
 | Model                 | Test Accuracy | Precision (Non‑Surv) | Recall (Non‑Surv) | F1‑Score (Non‑Surv) |
 |-----------------------|---------------|----------------------|-------------------|---------------------|
-| K‑Nearest Neighbors   | 0.75          | 0.68                 | 0.72              | 0.70                |
-| Decision Tree         | 0.78          | 0.74                 | 0.76              | 0.75                |
-| Random Forest         | 0.82          | 0.78                 | 0.82              | 0.80                |
-| XGBoost               | 0.84          | 0.81                 | 0.83              | 0.82                |
+| K‑Nearest Neighbors   | 0.66          | 0.70                 | 0.56              | 0.62                |
+| Decision Tree         | 0.82          | 0.90                 | 0.71              | 0.83                |
+| Random Forest         | 0.85          | 0.91                 | 0.78              | 0.84                |
+| XGBoost               | 0.53          | 0.53                 | 0.52              | 0.52                |
 | Neural Network (Keras)| 0.83          | 0.79                 | 0.83              | 0.81                |
 
 Feature importance (from Random Forest / XGBoost) typically identifies:  
@@ -172,44 +155,7 @@ Feature importance (from Random Forest / XGBoost) typically identifies:
 3. `family_history`  
 4. `smoking_history`  
 
-Graphs and detailed analysis are in **03_evaluation_and_analysis.ipynb**.
 
----
-
-## File Structure
-
-```
-.
-├── README.md
-├── requirements.txt
-├── data/
-│   └── lung_cancer.csv
-├── notebooks/
-│   ├── 01_data_preprocessing.ipynb
-│   ├── 02_model_training.ipynb
-│   └── 03_evaluation_and_analysis.ipynb
-├── models/
-│   ├── knn_model.pkl
-│   ├── decision_tree_model.pkl
-│   ├── random_forest_model.pkl
-│   ├── xgboost_model.pkl
-│   └── neural_network_model.h5
-├── src/
-│   ├── data_loader.py
-│   ├── preprocessing.py
-│   ├── train_models.py
-│   └── evaluate.py
-└── LICENSE
-```
-
-- **data/** – Contains the raw CSV(s).  
-- **notebooks/** – Jupyter notebooks for preprocessing, training, and evaluation.  
-- **models/** – Serialized model files (optional; generated after training).  
-- **src/** – (Optional) Modular scripts for data loading, preprocessing, training, and evaluation.  
-- **requirements.txt** – Python package dependencies.  
-- **LICENSE** – Project license (e.g., MIT).
-
----
 
 ## Conclusion & Future Work
 
